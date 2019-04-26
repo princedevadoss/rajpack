@@ -1,0 +1,12 @@
+<section>
+        <img class = "rj-about-image" src="../../assets/images/customer.jpg"/>
+        <div class="rj-about" id="about">
+            <h3>Customer:</h3>
+            <br>
+            <img class="rj-loader" ng-show="loading" src="../../assets/images/loader.gif"/>
+             <p ng-repeat-start = "customer in rajpack.customers"> {{customer}} <p ng-repeat-end/>
+        </div>
+        <div class="rj-home-footer">
+                Copyright All Rights Reserved © 2018
+        </div>
+    </section>

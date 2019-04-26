@@ -1,0 +1,35 @@
+<div class="jumbotron" ng-init="init()">
+    <h2 style="margin: 16px;">Add Details</h2>
+    <div class="form-group">
+        <label for="About Us" style="margin:16px;">About Us:</label>
+        <textarea ng-repeat = "aboutus in tempState.aboutus" class="form-control" ng-model = "aboutus" rows="5" id="aboutus" ng-blur="tempState.aboutus[$index] = aboutus" style="width:80%;margin:16px;"></textarea>
+    </div>
+    <div class="form-group">
+        <label style="margin:16px;">Add Machinery</label>
+        <form role="form">
+            <input type="text" class="form-control" placeholder="Machine Name" name="machinery" style="width:80%;margin:16px;" ng-model="machinery">
+        </form>
+        <button type="button" class="btn btn btn-primary" style="margin:16px;" ng-click="tempState.machinery.push(machinery)">Add</button>
+    <ul class="list-unstyled" id="machine-names">
+        <li class = 'li-items' ng-repeat-start="machinery in tempState.machinery"> {{machinery}}</li>
+        <span class="glyphicon glyphicon-remove-sign delete-icon" ng-click="tempState.machinery.splice($index, 1)"></span>
+        <br><br ng-repeat-end/>
+    </ul>
+    </div>
+    <div class="form-group">
+        <label style="margin:16px;">Add Customers</label>
+        <form role="form">
+            <input type="text" class="form-control" placeholder="Customer Name" name="customers" style="width:80%;margin:16px;" ng-model="customer">
+        </form>
+        <button type="button" class="btn btn btn-primary" style="margin:16px;" ng-click="tempState.customers.push(customer)">Add</button>
+        <ul class="list-unstyled" id="customer-names">
+            <li class = 'li-items' ng-repeat-start="customer in tempState.customers"> {{customer}}</li>
+            <span class="glyphicon glyphicon-remove-sign delete-icon" ng-click="tempState.customers.splice($index, 1)"></span>
+            <br><br ng-repeat-end/>
+        </ul>
+    </div>
+    <div class="page-footer" style="margin:16px;text-align:center;">
+        <button type="button" class="btn btn btn-success" ng-click="saveChanges()" >Save</button>
+        <button type="button" class="btn btn btn-danger" ng-click="discardChanges()" >Cancel</button>
+    </div>
+</div>

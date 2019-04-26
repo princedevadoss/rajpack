@@ -1,0 +1,22 @@
+<section>
+        <img class = "rj-about-image" src="../../assets/images/machines.jpg"/>
+        <div class="rj-about" id="about">
+            <h1><b>Machinery</b></h1>
+            <br>
+            <img class="rj-loader" ng-show="loading" src="../../assets/images/loader.gif"/>
+             <p ng-repeat-start = "machine in machinery.content">
+                     <div class="rj-flex-horz">
+                     <div class="rj-flex">
+                        <div class="rj-machine-name"> {{machine.name}} </div>
+                        <div class="rj-machine-desc" >
+                                {{machine.desc}}
+                        </div>
+                     </div>
+                     <img class="rj-machine" src="data:image/jpg;base64,{{machinery.image[$index].image}}"/>
+                </div>
+             <p ng-repeat-end/>
+        </div>
+        <div class="rj-home-footer">
+                Copyright All Rights Reserved © 2018
+        </div>
+    </section>
