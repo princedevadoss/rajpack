@@ -1,17 +1,53 @@
 let serviceMongoose = require('../../services/main');
 let company = require('../../services/main/model');
+let machineryImages = require('../../services/main/about-model');
 let aboutImages = require('../../services/main/about-model');
 
 function _putContent (req, res) {
     serviceMongoose().then(function(r) {
-        company.findOneAndUpdate({_id : req.body._id}, req.body, {upsert : true}, function (err, company) {
+        let bodyContent = req.body;
+        let companyDetails = {
+            _id : bodyContent._id,
+            aboutus: bodyContent.aboutus,
+            machinery : bodyContent.machinery,
+            customers : bodyContent.customers
+        };
+        company.findOneAndUpdate({_id : bodyContent._id}, companyDetails, {upsert : true}, function (err, company) {
             if(err) {
                 throw err;
             }
             else {
-                res.send(company);
+                if (bodyContent.machineryImages.length || bodyContent.deleteMachinery.length) {
+                    var promises = [];
+                    bodyContent.machineryImages = bodyContent.machineryImages.concat(bodyContent.deleteMachinery);
+                    bodyContent.machineryImages.forEach((image) => {
+                        if (image.status === 'delete') {
+                            promises.push(machineryImages.find({aid: image.id}).remove());
+                        }
+                        else if (image.status === 'new') {
+                            let newmachine = new machineryImages({
+                                aid: image.id,
+                                img: {
+                                    contentType: 'image/jpg',
+                                    data: new Buffer(image.image,"base64")
+                                }
+                            });
+                            promises.push(newmachine.save());
+                        }
+                        else {
+                            promises.push(machineryImages.update({aid : image.id}, {img: {contentType: 'image/jpg', data:new Buffer(image.image,"base64")}}, {multi: true}));
+                        }
+                    });
+                    Promise.all(promises).then((result) => {
+                        res.send({message: 'success'});
+                        r.disconnect();
+                    });
+                }
+                else {
+                    res.send({message: 'success'});
+                    r.disconnect();
+                }
             }
-            r.disconnect();
         });
     })
     .catch(function(err){
