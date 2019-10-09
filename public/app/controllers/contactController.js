@@ -1,7 +1,7 @@
 App.controller('ContactController', [
     '$scope', '$http', '$compile', 
     function ($scope, $http, $compile) {
-      function init() {
+       $scope.init = function() {
         var googleMapOption = {
           zoom: 17,
           center: { lat: 13.1825065, lng: 80.1172107 }
@@ -29,7 +29,7 @@ App.controller('ContactController', [
                 })(marker, compiledContent[0], $scope));
       }
 
-      google.maps.event.addDomListener(window, 'load', init);
+      google.maps.event.addDomListener(window, 'load', $scope.init);
     }
     
   ]);
