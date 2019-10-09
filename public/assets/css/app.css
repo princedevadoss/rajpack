@@ -86,14 +86,14 @@ button:hover {
 }
 
 .rj-about-images {
-    width:23%;
+    width:48%;
     height:400px;
     margin:5px 5px;
 }
 
 .rj-about-images:hover {
     height: 450px;
-    width: 25%;
+    width: 49%;
     margin: 0px 0px;
     -webkit-transition-duration: 0.8s;
     transition-duration: 0.8s;
@@ -304,8 +304,10 @@ li a:focus {
   .inner-contact {
       margin-left: 25%;
       margin-right: 25%;
-      padding-top: 5%;
-      height:600px;
+      margin-top: 5%;
+      height:1250px;
+      position: absolute;
+      background: rgba(44, 44, 44, 0.466);
   }
 
   .contact-header {
@@ -373,10 +375,10 @@ li a:focus {
 }
 
   .rj-contact-bg {
-      background: url('../images/contactback.jpg');
+      background: url('../images/caurosel5.JPG');
       background-repeat: no-repeat;
       background-size: cover;
-      height: 100vw;
+      height: 80vw;
   }
 
   .office-content {
