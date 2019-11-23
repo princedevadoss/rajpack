@@ -10,10 +10,13 @@ app.use(bodyParser({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/', express.static(path.join(__dirname, '../public-new')));
+app.use('/', express.static(path.join(__dirname, '../public')));
 app.use('/app', main);
 app.get('*', function(req, res) {
-    res.sendfile('./public-new/index.html')
-  });
+    res.sendfile('./public/index.html')
+});
+app.get('/boxapp', function(req, res) {
+  res.sendfile('./public/boxapp/index.html')
+});
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 
