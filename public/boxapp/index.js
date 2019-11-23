@@ -24,7 +24,7 @@ $(document).ready(function() {
         '24 BF': 31,
         '28 BF': 32.50,
         '30 BF': 35,
-        "Duplex Board": 39
+        'Duplex Board': 39
     }
     $('.result').hide();
     $('#lenmm').keyup(function() {
