@@ -166,11 +166,12 @@ button:focus {
 }
 
 .result-content {
-    margin-top: 50px;
-    margin-left: 400px;
-    width: 800px;
-    height: 850px;
+    margin-top: 5%;
+    margin-left: 20%;
+    width: 60%;
+    height: 85%;
     background: white;
+    overflow:scroll;
 }
 
 th.ch {
