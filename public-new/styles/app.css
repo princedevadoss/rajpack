@@ -161,6 +161,69 @@ body {
     position: relative;
 }
 
+.short-card {
+    margin: 20px;
+    width: 300px;
+    height: 200px;
+    display: flex;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+}
+
+.blacken-board {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    bottom:0;
+    z-index: 2;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.short-card:hover > .place-text{
+    transition: 1s;
+    opacity: 1;
+    -ms-transform: translate(0, -100px);
+    -webkit-transform: translate(0, -100px);
+    transform: translate(0, -100px);
+    -webkit-transition: -webkit-transform 1s;
+    -moz-transition: -moz-transform 1s;
+    -ms-transition: -ms-transform 1s;
+    transition: transform 1s;
+}
+
+.short-card:hover > .blacken-board {
+    height: 100%;
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
+}
+
+.place-text {
+    position: absolute;
+    opacity: 0;
+    bottom: 0;
+    z-index: 3;
+    left: 0;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+
+.short-card > img {
+    height: 70%;
+    width: 60%;
+    display: block;
+    margin: auto;
+    align-items: center;
+}
+
 .card > img{
     height: 100%;
     width: 100%;
@@ -223,4 +286,46 @@ body {
     text-align: center;
     font-family: 'Quicksand', sans-serif;
     text-shadow: 1px 1px 2px #000;
+}
+
+.float-container {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -3;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.float-container.open-state {
+    z-index: 3;
+    opacity: 1;
+}
+
+.modal {
+    width: 0;
+    height: 0;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 10px;
+    background: white;
+    font-family: 'Quicksand', sans-serif;
+    padding: 20px;
+    line-height: 2rem;
+    align-items: center;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    transition: width 1s;
+}
+
+.float-container.open-state > .modal {
+    width: 60vw;
+    height: 60vh;
 }

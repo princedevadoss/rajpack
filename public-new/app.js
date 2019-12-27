@@ -5,6 +5,14 @@ $(document).ready(function() {
         changeImage($('img[data-active="true"').data('id'), true, 5, 1);  
     });
 
+    $('.short-card').click(function() {
+        $('.float-container').addClass('open-state');
+    });
+
+    $('.float-container').click(function() {
+        $('.float-container').removeClass('open-state');
+    });
+
     $('#img-next').click(function() {
         changeImage($('img[data-active="true"').data('id'), false, 5, 1);  
     });
