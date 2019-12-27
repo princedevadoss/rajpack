@@ -8,19 +8,19 @@
     <script src="app.js"></script>
 </head>
 
-<body>
+<body onload="onloader()">
     <div class="app-container">
         <div class="nav-tab">
             <div class="logo-container">
                 <img class="logo" src="assets/finallogo.png" />
             </div>
             <a href="#">Contact Us</a>
-            <a href="#">Products</a>
-            <a href="#">About Us</a>
-            <a href="#">Home</a>
+            <a href="#workplace">Work Place</a>
+            <a href="#about">About Us</a>
+            <a href="#home">Home</a>
         </div>
         <div class="main-page">
-            <div class="image-container">
+            <div id="home" class="image-container">
                 <div id="img-prev">
                     <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
@@ -50,11 +50,10 @@
                     </svg>
                 </div>
             </div>
-            <div class="rajpack-content">
-                <div class="content-header">RAJPACK</div>
+            <div id="about" class="rajpack-content">
                 <div class="content-body">
                     <p>
-                        Rajpack is a India, Chennai based company engaged in design,
+                        <span class="content-starter">Rajpack</span> is a India, Chennai based company engaged in design,
                         printing, manufacturing & distributing wide range of packaging materials such as corrugated boxes,
                         cardboard boxes etc.. We provide package design solutions to a wide array of industry and end user applications.
                     </p>
@@ -64,7 +63,14 @@
                         1 Ply, 3 Ply, 5 Ply, 7Ply and 9 Ply Boxes. We provides high quality corrugated boxes with affordable prize compared to market rate.
                     </p>
                 </div>
-                <div class="content-header">LEADER SHIP</div>
+                <div class="content-body">
+                    <p>
+                        <span class="content-starter">Our Journey So Far</span> We started at the year <b>2001</b> with rented space with around 5 skilled and unskilled staffs.
+                        We had a annual turnover of around 10 lakhs per annum. Now we are in our own space of around <b>2000.sq.ft</b> with two floors and having around 15+ skilled and unskilled labours.
+                        We are currently making a turnover of around 50 lakhs per annum. 
+                    </p>
+                </div>
+                <div class="content-header">Leadership</div>
                 <div class="card" style="margin: auto;">
                     <img src="assets/owner.JPG"/>
                     <div>Director</div>
@@ -76,8 +82,8 @@
                     </p>
                 </div>
             </div>
-            <div class="rajpack-content">
-                <div class="content-header">OUR COMPANY</div>
+            <div id="workplace" class="rajpack-content">
+                <div class="content-header">Work Place</div>
                 <div class="content-body">
                     <div class="rajpack-cards">
                         <div class="card">

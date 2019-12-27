@@ -3,7 +3,6 @@ body {
 }
 .app-container {
     background: rgb(248, 248, 248);
-    height: 100%;
     overflow: scroll;
     position: relative;
     min-width: 600px;
@@ -114,7 +113,7 @@ body {
     margin: 20;
     background: linear-gradient(to bottom, rgba(218, 216, 216, 0.322), rgb(255, 254, 254));
     font-family: 'Quicksand', sans-serif;
-    text-align: center;
+    text-align: left;
 }
 
 .rajpack-content > .content-header {
@@ -122,11 +121,19 @@ body {
     font-size: 2rem;
     color: rgb(2, 58, 143);
     text-align: center;
-    padding: 25px
+    padding: 15px;
+}
+
+.rajpack-content  .content-starter {
+    font-weight: 600;
+    font-size: 2rem;
+    color: rgb(2, 58, 143);
+    text-align: center;
+    padding: 0 20px;
 }
 
 .rajpack-content > .content-body {
-    padding: 30px;
+    padding: 20px;
     font-size: 20px;
     color: rgb(114, 112, 112);
     line-height: 1.6;
@@ -184,7 +191,7 @@ body {
     border: 1px solid rgb(2, 58, 143);
     border-radius: 10px;
     box-shadow: 1px 1px 4px black;
-    cursor: pointer;
+    cursor: auto;
     text-overflow: clip;
     overflow: hidden;
     white-space: nowrap;
@@ -200,20 +207,20 @@ body {
 }
 
 .hover-text {
-    color: rgb(2, 58, 143);
+    color: rgb(250, 251, 252);
     font-weight: 600;
     font-size: 36px;
     position: absolute;
-    top: 100px;
     z-index: 1;
     line-height: 4rem;
+    height: 300px;
     margin: auto;
     left: 0;
-    width: 700px;
-    right: 0;
-    background: rgba(250, 249, 249, 0.815);
-    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.322);
+    width: 100%;
+    padding-top: 100px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.521), rgba(255,255,255, 0));
     border-radius: 10px;
     text-align: center;
     font-family: 'Quicksand', sans-serif;
+    text-shadow: 1px 1px 2px #000;
 }

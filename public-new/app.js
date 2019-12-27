@@ -35,4 +35,24 @@ $(document).ready(function() {
         clearInterval(period);
         period = setInterval(changer, 4000);
     }
+
+    $("a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          var hash = this.hash;
+          console.log(hash);
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top - 70
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+    });
 });
+
+function onloader() {
+    history.replaceState(null, null, ' ');
+    $('html, body').animate({
+    scrollTop: 0
+    }, 200);
+}
