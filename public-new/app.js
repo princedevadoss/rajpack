@@ -6,11 +6,26 @@ $(document).ready(function() {
     });
 
     $('.short-card').click(function() {
-        $('.float-container').addClass('open-state');
+        $.ajax({
+            url: `/new/templates/${$(this).data('url')}.html`,
+            type: 'GET',
+            success: function(data) {
+                $('.float-container').addClass('open-state');
+                $('.float-container .modal').html(data);
+            },
+            error: function(err) {
+                throw err;
+            }
+        });
     });
 
     $('.float-container').click(function() {
         $('.float-container').removeClass('open-state');
+    });
+
+    $('.float-container > .modal').click(function(event) {
+        event.stopPropagation();
+        event.preventDefault();
     });
 
     $('#img-next').click(function() {

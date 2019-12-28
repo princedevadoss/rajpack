@@ -12,7 +12,7 @@ body {
     width: 100%;
     height: 60px;
     min-width: 600px;
-    z-index: 2;
+    z-index: 4;
     background: rgb(66, 152, 250);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.301);
 }
@@ -132,33 +132,50 @@ body {
     padding: 0 20px;
 }
 
-.rajpack-content > .content-body {
+.content-body {
     padding: 20px;
     font-size: 20px;
     color: rgb(114, 112, 112);
     line-height: 1.6;
 }
 
-.rajpack-content .content-highlight {
+.content-highlight {
     font-weight: 800;
-    color: rgb(63, 62, 62);
-    font-size: 20px;
+    color: rgb(2, 58, 143);
+    font-size: 24px;
 }
 
 .rajpack-content .rajpack-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin: 5px;
+    background: white;
+    border-radius: 10px;
+    position: relative;
+}
+
+.card-pack {
+    padding: 0;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 
-.card {
-    margin: 20px;
+.type1 {
     width: 486px;
     height: 400px;
-    background: white;
-    border-radius: 10px;
-    position: relative;
+}
+.type2 {
+    width: 486px;
+    height: 600px;
+}
+.type3 {
+    width: 486px;
+    height: 200px;
 }
 
 .short-card {
@@ -227,7 +244,6 @@ body {
 .card > img{
     height: 100%;
     width: 100%;
-    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     -webkit-transition: opacity 0.5s ease-in-out;
     -moz-transition: opacity 0.5s ease-in-out;
@@ -328,4 +344,5 @@ body {
 .float-container.open-state > .modal {
     width: 60vw;
     height: 60vh;
+    overflow: scroll;
 }
