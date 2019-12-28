@@ -23,6 +23,10 @@ $(document).ready(function() {
         $('.float-container').removeClass('open-state');
     });
 
+    $('.modal').on('click', '#close', function() {
+        $('.float-container').removeClass('open-state');
+    });
+
     $('.float-container > .modal').click(function(event) {
         event.stopPropagation();
         event.preventDefault();
