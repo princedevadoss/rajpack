@@ -348,7 +348,7 @@ body {
 }
 
 .contact-holder {
-    position: absolute;
+    position: fixed !important;
     right: 10px;
     width: 30px;
     font-size: 34px !important;
@@ -366,6 +366,32 @@ body {
     transition: width 1s;
 }
 
+.email-holder {
+    position: fixed !important;
+    top: 170px;
+    right: 10px;
+    width: 30px;
+    font-size: 30px !important;
+    padding: 10px 15px 12px 15px;
+    background: red;
+    border-radius: 25px;
+    cursor: pointer;
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    text-align: left;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    transition: width 1s;
+}
+
+
+
+.email-holder:hover {
+    width: 280px;
+}
+
 .contact-holder:hover {
     width: 200px;
 }
@@ -378,6 +404,7 @@ body {
     top: 12px;
     font-size: 24px;
     font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
     width: 50px;
     opacity: 0;
     white-space: nowrap;
@@ -386,6 +413,30 @@ body {
     -ms-transition: width 1s, opacity 1s;
     transition: width 1s, opacity 1s;
 }
+
+.email-id {
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    left: 55px;
+    top: 14px;
+    font-size: 20px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    width: 50px;
+    opacity: 0;
+    white-space: nowrap;
+    -webkit-transition: width 1s, opacity 1s;
+    -moz-transition: width 1s, opacity 1s;
+    -ms-transition: width 1s, opacity 1s;
+    transition: width 1s, opacity 1s;
+}
+
+.email-holder:hover > .email-id {
+    opacity: 1;
+    width: 250px;
+}
+
 
 .contact-holder:hover > .mob-number {
     opacity: 1;
