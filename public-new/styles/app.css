@@ -198,6 +198,10 @@ body {
     z-index: 2;
     border-radius: 10px;
     background: rgba(0, 0, 0, 0.8);
+    -webkit-transition: height 0.5s;
+    -moz-transition: height 0.5s;
+    -ms-transition: height 0.5s;
+    transition: height 0.5s;
 }
 
 .short-card:hover > .place-text{
@@ -206,18 +210,10 @@ body {
     -ms-transform: translate(0, -100px);
     -webkit-transform: translate(0, -100px);
     transform: translate(0, -100px);
-    -webkit-transition: -webkit-transform 1s;
-    -moz-transition: -moz-transform 1s;
-    -ms-transition: -ms-transform 1s;
-    transition: transform 1s;
 }
 
 .short-card:hover > .blacken-board {
     height: 100%;
-    -webkit-transition: height 0.5s;
-    -moz-transition: height 0.5s;
-    -ms-transition: height 0.5s;
-    transition: height 0.5s;
 }
 
 .place-text {
@@ -230,6 +226,10 @@ body {
     font-size: 20px;
     font-weight: 600;
     width: 100%;
+    -webkit-transition: -webkit-transform 1s, opacity 0.5s;
+    -moz-transition: -moz-transform 1s, opacity 0.5s;
+    -ms-transition: -ms-transform 1s, opacity 0.5s;
+    transition: transform 1s, opacity 0.5s;
     text-align: center;
 }
 
@@ -336,10 +336,10 @@ body {
     padding: 20px;
     line-height: 2rem;
     align-items: center;
-    -webkit-transition: width 1s;
-    -moz-transition: width 1s;
-    -ms-transition: width 1s;
-    transition: width 1s;
+    -webkit-transition: width 1s, height 1s;
+    -moz-transition: width 1s, height 1s;
+    -ms-transition: width 1s, height 1s;
+    transition: width 1s, height 1s;
 }
 
 .float-container.open-state > .modal {
@@ -352,6 +352,7 @@ body {
     position: fixed !important;
     right: 10px;
     width: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     font-size: 34px !important;
     padding: 10px 15px;
     background: rgb(2, 58, 143);
@@ -373,6 +374,7 @@ body {
     right: 10px;
     width: 30px;
     font-size: 30px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     padding: 10px 15px 12px 15px;
     background: red;
     border-radius: 25px;
