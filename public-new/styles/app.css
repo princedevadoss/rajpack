@@ -346,3 +346,48 @@ body {
     height: 60vh;
     overflow: scroll;
 }
+
+.contact-holder {
+    position: absolute;
+    right: 10px;
+    width: 30px;
+    font-size: 34px !important;
+    padding: 10px 15px;
+    background: rgb(2, 58, 143);
+    border-radius: 25px;
+    cursor: pointer;
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    text-align: left;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    transition: width 1s;
+}
+
+.contact-holder:hover {
+    width: 200px;
+}
+
+.mob-number {
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    left: 50px;
+    top: 12px;
+    font-size: 24px;
+    font-family: 'Quicksand', sans-serif;
+    width: 50px;
+    opacity: 0;
+    white-space: nowrap;
+    -webkit-transition: width 1s, opacity 1s;
+    -moz-transition: width 1s, opacity 1s;
+    -ms-transition: width 1s, opacity 1s;
+    transition: width 1s, opacity 1s;
+}
+
+.contact-holder:hover > .mob-number {
+    opacity: 1;
+    width: 180px;
+}
