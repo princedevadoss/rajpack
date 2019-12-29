@@ -344,7 +344,7 @@ body {
 
 .float-container.open-state > .modal {
     width: 60vw;
-    height: 60vh;
+    height: 500px;
     overflow: scroll;
 }
 
@@ -468,4 +468,164 @@ body {
 
 .close:hover > .close-inline {
     color: rgba(255, 0, 0, 0.3);
+}
+
+.contact-card {
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 600px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background: black;
+}
+
+.contact-fr {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-info {
+    width: 75%;
+    padding: 10px;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 20px;
+}
+
+.contact-left {
+    text-align: left;
+    padding-left: 20px;
+    margin: 10px 0;
+    font-size: 24px;
+    font-weight: 600;
+    width: 15%;
+}
+
+.contact-right {
+    margin-left: 20px;
+    width: 80%;
+}
+
+.social-media {
+    width: 20%;
+    padding: 10px;
+    height: 200px;
+    position: relative;
+    color: white;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 24px;
+}
+
+.fa-whatsapp {
+    color: rgb(3, 236, 3);
+    font-size: 54px !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.397);
+    margin: 20px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 10px;
+    background: white;
+    z-index: 5;
+    cursor: pointer;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    transition: width 1s;
+}
+
+.fa-whatsapp:hover {
+    width: 220px;
+}
+
+.fa-facebook {
+    color: rgb(23, 38, 250);
+    font-size: 54px !important;
+    text-decoration: none;
+    margin: 20px;
+    left: 100px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.397);
+    top: 0;
+    position: absolute;
+    background: white;
+    padding: 6px 17px 2px 17px;
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -ms-transition: background 1s;
+    transition: background 1s;
+}
+
+.fa-whatsapp:hover + .whatsapp {
+    width: 180px;
+}
+
+.whatsapp {
+    position: absolute;
+    width: 0;
+    left: 85px;
+    top: 35px;
+    text-overflow: clip;
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    transition: width 1s;
+    z-index: 6;
+    color: rgb(2, 177, 2);
+}
+
+.fa-facebook:hover {
+    background: rgba(255, 255, 255, 0.404);
+}
+
+.fa-twitter {
+    color: rgb(89, 193, 253);
+    font-size: 54px !important;
+    margin: 20px;
+    position: absolute;
+    left: 200px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.397);
+    top: 0;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+    -webkit-transition: background 1s;
+    -moz-transition: background 1s;
+    -ms-transition: background 1s;
+    transition: background 1s;
+}
+
+.fa-twitter:hover {
+    background: rgba(255, 255, 255, 0.404);
+}
+
+@media screen and (max-width: 1200px) {
+    .fa-twitter {
+        top: 80px;
+        left: 0;
+    }
+    .fa-whatsapp {
+        top: 0;
+        left: -50px;
+    }
+    .fa-facebook {
+        top: 0;
+        left: 50px;
+    }
+    .whatsapp {
+        left: 35px;
+    }
 }

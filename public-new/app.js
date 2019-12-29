@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     $('.short-card').click(function() {
         $.ajax({
-            url: `/new/templates/${$(this).data('url')}.html`,
+            url: `/templates/${$(this).data('url')}.html`,
             type: 'GET',
             success: function(data) {
                 $('.float-container').addClass('open-state');
