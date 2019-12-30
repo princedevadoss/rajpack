@@ -3,43 +3,43 @@ App.config(function ($routeProvider, $locationProvider) {
     .when('/', 
       {
         controller: 'HomeController',
-        templateUrl: 'app/templates/home.html'
+        templateUrl: 'old/app/templates/home.html'
       }
     )
     .when('/admin',
       {
         controller: 'AdminController',
-        templateUrl: 'app/templates/admin.html'
+        templateUrl: 'old/app/templates/admin.html'
       }
     )
     .when('/adminpage',
       {
         controller: "AdminPageController",
-        templateUrl: 'app/templates/adminpage.html'
+        templateUrl: 'old/app/templates/adminpage.html'
       }
     )
     .when('/contact',
       {
         controller: "ContactController",
-        templateUrl: 'app/templates/contactus.html'
+        templateUrl: 'old/app/templates/contactus.html'
       }
     )
     .when('/aboutus',
       {
         controller: "AboutController",
-        templateUrl: 'app/templates/aboutus.html'
+        templateUrl: 'old/app/templates/aboutus.html'
       }
     )
     .when('/machinery',
       {
         controller: "MachineryController",
-        templateUrl: 'app/templates/machinery.html'
+        templateUrl: 'old/app/templates/machinery.html'
       }
     )
     .when('/customer',
       {
         controller: "CustomerController",
-        templateUrl: 'app/templates/customer.html'
+        templateUrl: 'old/app/templates/customer.html'
       }
     )
     .otherwise( { redirectTo: '/' } );

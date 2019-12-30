@@ -463,6 +463,22 @@ body {
     background: rgba(81, 216, 250, 0.884);
 }
 
+.enquiry:hover {
+    background: rgba(218, 219, 218, 0.527);
+}
+
+.footer {
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    font-size: 16px;
+    color: rgb(2, 58, 143);
+    font-weight: 600;
+    font-family: 'Quicksand', sans-serif;
+    width: 100%;
+}
 
 
 .email-holder:hover {
