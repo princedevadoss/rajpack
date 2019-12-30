@@ -67,23 +67,24 @@
         border: 2px solid rgb(2, 58, 143);
         background: rgb(66, 152, 250, 0.3);
         color: rgb(2, 58, 143);
+        outline: none;
     }
 
     .form-btn:hover {
         background: rgba(195, 223, 255, 0.801);
     }
 </style>
-<form id="feedback-form">
+<form id="feedback-form" action="/app/api/feedback" method="post">
     <div class="form-header"><h2><b>Write Us Your Feedback</b></h2></div>
     <div class="form-body">
         <div class="rajpack-label">Name</div>
-        <input type="text" />
+        <input type="text" name="name"/>
         <div class="rajpack-label">Email Id</div>
-        <input type="text" />
+        <input type="text" name="email"/>
         <div class="rajpack-label">Contact Number</div>
-        <input type="text" />
+        <input type="text" name="contact"/>
         <div class="rajpack-label">Comments</div>
-        <textarea rows="6" cols="50"></textarea>
+        <textarea rows="6" cols="50" name="comment"></textarea>
         <input class="form-btn" type="submit" value="Submit"/>
     </div>
 </form>

@@ -19,6 +19,8 @@ $(document).ready(function() {
         });
     }
 
+
+
     $('.short-card').click(function() {
         loadTemplate(`/templates/${$(this).data('url')}.html`);
     });
@@ -29,6 +31,30 @@ $(document).ready(function() {
 
     $('.float-container').click(function() {
         $('.float-container').removeClass('open-state');
+    });
+    $('.modal').on('click', '.form-btn', function() {
+        $.ajax({
+            url: '/app/api/feedback',
+            type: 'POST',
+            data: {
+                name: $('input[name="name"]').val(),
+                email: $('input[name="email"]').val(),
+                contact: $('input[name="contact"]').val(),
+                comment: $('input[name="comment"]').val()
+            },
+            beforeSend: function() {
+                $('.loading-modal').removeClass('hide');
+                $('.modal').addClass('hide');
+            },
+            success: function(data) {
+                $('.loading-modal').addClass('hide');
+                $('.modal').removeClass('hide');
+                $('.float-container').removeClass('open-state');
+            },
+            error: function(err) {
+                throw err;
+            }
+        });
     });
 
     $('.modal').on('click', '#close', function() {

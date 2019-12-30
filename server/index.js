@@ -14,10 +14,10 @@ app.use('/', express.static(path.join(__dirname, '../public-new')));
 app.use('/old', express.static(path.join(__dirname, '../public')));
 app.use('/app', main);
 app.get('/*', function(req, res) {
-    res.sendfile('.public-new/index.html')
+    res.sendfile('../public-new/index.html')
 });
 app.get('/old/*', function(req, res) {
-  res.sendfile('.public/index.html')
+  res.sendfile('../public/index.html')
 });
 app.get('/boxapp', function(req, res) {
   res.sendfile('./public/boxapp/index.html')
