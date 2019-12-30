@@ -19,42 +19,55 @@ $(document).ready(function() {
         });
     }
 
-
-
     $('.short-card').click(function() {
         loadTemplate(`/templates/${$(this).data('url')}.html`);
     });
 
-    $('#feedback').click(function() {
+    $('#feedback, #enquiry').click(function() {
         loadTemplate(`/templates/${$(this).data('url')}.html`);
     });
 
     $('.float-container').click(function() {
         $('.float-container').removeClass('open-state');
     });
-    $('.modal').on('click', '.form-btn', function() {
+
+    function formSubmission(url, data) {
         $.ajax({
-            url: '/app/api/feedback',
+            url: url,
             type: 'POST',
-            data: {
-                name: $('input[name="name"]').val(),
-                email: $('input[name="email"]').val(),
-                contact: $('input[name="contact"]').val(),
-                comment: $('input[name="comment"]').val()
-            },
+            data: data,
             beforeSend: function() {
                 $('.loading-modal').removeClass('hide');
                 $('.modal').addClass('hide');
             },
             success: function(data) {
-                $('.loading-modal').addClass('hide');
-                $('.modal').removeClass('hide');
                 $('.float-container').removeClass('open-state');
             },
             error: function(err) {
                 throw err;
+            },
+            complete: function() {
+                $('.loading-modal').addClass('hide');
+                $('.modal').removeClass('hide');
             }
         });
+    }
+
+    $('.modal').on('click', '.form-btn', function() {
+        if ($(this).data('action') === 'feedback') {
+            formSubmission('/app/api/feedback', {
+                email: $('input[name="email"]').val(),
+                comment: $('textarea[name="comment"]').val()
+            });
+        }
+        else {
+            formSubmission('/app/api/enquiry', {
+                name: $('input[name="name"]').val(),
+                email: $('input[name="email"]').val(),
+                contact: $('input[name="contact"]').val(),
+                message: $('textarea[name="message"]').val()
+            });
+        }
     });
 
     $('.modal').on('click', '#close', function() {

@@ -437,6 +437,28 @@ body {
     transition: width 1s;
 }
 
+.enquiry {
+    position: fixed !important;
+    top: 240px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    font-size: 30px !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 10px 15px 12px 15px;
+    background: rgb(1, 2, 1);
+    border-radius: 25px;
+    cursor: pointer;
+    text-overflow: clip;
+    position: absolute;
+    overflow: hidden;
+    text-align: left;
+    -webkit-transition: width 1s;
+    -moz-transition: width 1s;
+    -ms-transition: width 1s;
+    transition: width 1s;
+}
+
 .feedback:hover {
     background: rgba(81, 216, 250, 0.884);
 }
