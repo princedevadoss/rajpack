@@ -5,13 +5,19 @@ $(document).ready(function() {
         changeImage($('img[data-active="true"').data('id'), true, 5, 1);  
     });
 
-    function loadTemplate(url) {
+    function loadTemplate(url, imageUrl, imageHeader) {
         $.ajax({
             url: url,
             type: 'GET',
             success: function(data) {
                 $('.float-container').addClass('open-state');
                 $('.float-container .modal').html(data);
+                if (imageUrl) {
+                    $('.machinery-content').html(`<img style="width:100%;height:100%;" src="${imageUrl}"/>`);
+                }
+                if (imageHeader) {
+                    $('.machinery-header').html(imageHeader);
+                }
             },
             error: function(err) {
                 throw err;
@@ -69,6 +75,10 @@ $(document).ready(function() {
             });
         }
     });
+
+    $('.machinery-text').click(function() {
+        loadTemplate(`/templates/machinery.html`, $(this).siblings('img').attr('src'), $(this).data('header'));
+    })
 
     $('.modal').on('click', '#close', function() {
         $('.float-container').removeClass('open-state');
