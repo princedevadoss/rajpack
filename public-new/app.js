@@ -5,9 +5,9 @@ $(document).ready(function() {
         changeImage($('img[data-active="true"').data('id'), true, 5, 1);  
     });
 
-    $('.short-card').click(function() {
+    function loadTemplate(url) {
         $.ajax({
-            url: `/templates/${$(this).data('url')}.html`,
+            url: url,
             type: 'GET',
             success: function(data) {
                 $('.float-container').addClass('open-state');
@@ -17,6 +17,14 @@ $(document).ready(function() {
                 throw err;
             }
         });
+    }
+
+    $('.short-card').click(function() {
+        loadTemplate(`/templates/${$(this).data('url')}.html`);
+    });
+
+    $('#feedback').click(function() {
+        loadTemplate(`/templates/${$(this).data('url')}.html`);
     });
 
     $('.float-container').click(function() {
