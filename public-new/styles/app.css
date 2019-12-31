@@ -883,6 +883,14 @@ img:hover + .machinery-text, img + .machinery-text:hover {
     }
 }
 
+@media handheld and (max-width: 400px), screen and (max-device-width: 400px), screen and (max-width: 400px) { 
+    .nav-tab > .menu {
+        font-size: 20px;
+        right: 20px;
+        margin-top: 0;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .nav-tab > .menu {
         display: block;
