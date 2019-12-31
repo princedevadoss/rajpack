@@ -77,6 +77,12 @@ $(document).ready(function() {
         else {
             $('.card.type3').addClass('img-type-left');
         }
+        if(scroll >= ($('.contact-card').offset().top - 400)) {
+            $('.contact-card').css('background', 'rgba(66, 152, 250, 0.082)');
+        }
+        else {
+            $('.contact-card').css('background', 'white');
+        }
     });
 
     $('.alt-nav-tab').addClass('hide');
