@@ -50,6 +50,33 @@ $(document).ready(function() {
             $($('.machinery-grid img')[7]).removeClass('rot-type1');
             $($('.machinery-grid img')[8]).removeClass('rot-type4');
         }
+        if (scroll >= ($('.short-card').offset().top - 800)) {
+            $('.short-card').removeClass('img-type-left');
+        }
+        else {
+            $('.short-card').addClass('img-type-left');
+        }
+
+        if (scroll >= ($('.card.type1').offset().top - 800)) {
+            $('.card.type1').removeClass('img-type-left');
+        }
+        else {
+            $('.card.type1').addClass('img-type-left');
+        }
+
+        if (scroll >= ($('.card.type2').first().offset().top - 1000)) {
+            $('.card.type2').removeClass('img-type-right');
+        }
+        else {
+            $('.card.type2').addClass('img-type-right');
+        }
+
+        if (scroll >= ($('.card.type3').first().offset().top - 1000)) {
+            $('.card.type3').removeClass('img-type-left');
+        }
+        else {
+            $('.card.type3').addClass('img-type-left');
+        }
     });
 
     $('.alt-nav-tab').addClass('hide');
