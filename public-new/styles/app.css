@@ -16,6 +16,21 @@ body {
     background: rgb(66, 152, 250);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.301);
 }
+
+.alt-nav-tab {
+    width: 100%;
+    position: fixed;
+    height: 60px;
+    margin-top: 168px;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    min-width: 100px;
+    z-index: 4;
+    background: rgb(66, 152, 250);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.301);
+}
+
 .logo-container {
     float: left;
     height: 62px;
@@ -43,6 +58,39 @@ body {
     text-decoration: none;
     -webkit-transition: background 0.5s, color 1s;
     transition: background 0.5s, color 1s;
+}
+
+.alt-nav-tab > a {
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 15px;
+    background: white;
+    text-align: center;
+    border: 1px solid rgb(66, 152, 250);
+    z-index: 3;
+    display: block;
+    font-family: 'Quicksand', sans-serif;
+    text-decoration: none;
+    -webkit-transition: background 0.5s, color 1s;
+    transition: background 0.5s, color 1s;
+}
+
+.alt-nav-tab > a:hover {
+    background: rgb(66, 152, 250);
+    color: white;
+}
+
+.nav-tab > .menu {
+    right: 0;
+    color: white;
+    font-size: 32px;
+    position: fixed;
+    padding: 10px;
+    margin: 5px 10px;
+    cursor: pointer;
+    display: none;
 }
 
 .nav-tab > a:hover {
@@ -475,7 +523,7 @@ body {
     justify-content: center;
     height: 70px;
     font-size: 16px;
-    color: rgb(2, 58, 143);
+    color: rgb(0, 1, 2);
     font-weight: 600;
     font-family: 'Quicksand', sans-serif;
     width: 100%;
@@ -823,6 +871,21 @@ img:hover + .machinery-text, img + .machinery-text:hover {
 @media screen and (max-width: 800px) {
     .machinery-grid {
         grid-template-columns: auto;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .nav-tab > .menu {
+        display: block;
+    }
+    .nav-tab > a {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 700px) {
+    .alt-nav-tab {
+        display: none;
     }
 }
 }

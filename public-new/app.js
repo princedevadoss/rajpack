@@ -25,6 +25,12 @@ $(document).ready(function() {
         });
     }
 
+    $('.alt-nav-tab').addClass('hide');
+
+    $('.menu').click(function() {
+        $('.alt-nav-tab').toggleClass('hide');
+    });
+
     $('.short-card').click(function() {
         loadTemplate(`/templates/${$(this).data('url')}.html`);
     });
@@ -123,6 +129,7 @@ $(document).ready(function() {
     $("a").on('click', function(event) {
         if (this.hash !== "") {
           event.preventDefault();
+          $('.alt-nav-tab').addClass('hide');
           var hash = this.hash;
           console.log(hash);
           $('html, body').animate({
