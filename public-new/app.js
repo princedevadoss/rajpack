@@ -201,3 +201,22 @@ function onloader() {
     scrollTop: 0
     }, 200);
 }
+
+function myMap() {
+    
+    var mapProp= {
+        center:new google.maps.LatLng(13.1825065,80.1173892),
+        zoom: 18
+    };
+    var map = new google.maps.Map(document.getElementById("map"), mapProp);
+    var marker = new google.maps.Marker({position: new google.maps.LatLng(13.1825065,80.1173892)});
+    marker.setMap(map);
+    var infowindow = new google.maps.InfoWindow({
+        content:"<div style='color:rgb(2, 58, 143);font-weight:400;'><h2><b>Rajpack</b></h2> No: T247, T6 Main Road, Sidco Women Industrial Estate, Kattur Village, Thirumullaivoyal, Chennai - 600 062.<div>"
+    });
+    infowindow.open(map, marker);
+
+    google.maps.event.addListener(marker, 'click', function() {
+        infowindow.open(map,marker);
+    });
+}
