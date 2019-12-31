@@ -756,7 +756,7 @@ body {
     display: grid;
     margin-top: 50px;
     grid-template-columns: auto auto auto;
-    grid-gap: 5px;
+    grid-gap: 50px;
     position: relative;
     justify-content: center;
 }
@@ -773,6 +773,14 @@ body {
     -moz-transition: opacity 1s, transform 1s;
     -ms-transition: opacity 1s, transform 1s;
     transition: opacity 1s, transform 1s;
+}
+
+.img-type-left {
+    transform: translateX(-1000px);
+}
+
+.img-type-right {
+    transform: translateX(1000px);
 }
 
 .rot-type1{
