@@ -874,7 +874,7 @@ img:hover + .machinery-text, img + .machinery-text:hover {
     }
 }
 
-@media screen and (max-width: 700px) {
+@media handheld and (max-width: 600px), screen and (max-device-width: 600px), screen and (max-width: 600px) { 
     .nav-tab > .menu {
         display: block;
     }
@@ -883,9 +883,12 @@ img:hover + .machinery-text, img + .machinery-text:hover {
     }
 }
 
-@media screen and (min-width: 700px) {
-    .alt-nav-tab {
+@media screen and (max-width: 600px) {
+    .nav-tab > .menu {
+        display: block;
+    }
+    .nav-tab > a {
         display: none;
     }
-}
+ }
 }
