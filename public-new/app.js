@@ -25,6 +25,33 @@ $(document).ready(function() {
         });
     }
 
+    $(window).scroll(function() {
+
+        var scroll = $(window).scrollTop();
+        if (scroll >= ($('#machineries').offset().top - 300)) {
+            $($('.machinery-grid img')[0]).addClass('rot-type1');
+            $($('.machinery-grid img')[1]).addClass('rot-type2');
+            $($('.machinery-grid img')[2]).addClass('rot-type3');
+            $($('.machinery-grid img')[3]).addClass('rot-type4');
+            $($('.machinery-grid img')[4]).addClass('rot-type5');
+            $($('.machinery-grid img')[5]).addClass('rot-type3');
+            $($('.machinery-grid img')[6]).addClass('rot-type2');
+            $($('.machinery-grid img')[7]).addClass('rot-type1');
+            $($('.machinery-grid img')[8]).addClass('rot-type4');
+        }
+        else {
+            $($('.machinery-grid img')[0]).removeClass('rot-type1');
+            $($('.machinery-grid img')[1]).removeClass('rot-type2');
+            $($('.machinery-grid img')[2]).removeClass('rot-type3');
+            $($('.machinery-grid img')[3]).removeClass('rot-type4');
+            $($('.machinery-grid img')[4]).removeClass('rot-type5');
+            $($('.machinery-grid img')[5]).removeClass('rot-type3');
+            $($('.machinery-grid img')[6]).removeClass('rot-type2');
+            $($('.machinery-grid img')[7]).removeClass('rot-type1');
+            $($('.machinery-grid img')[8]).removeClass('rot-type4');
+        }
+    });
+
     $('.alt-nav-tab').addClass('hide');
 
     $('.menu').click(function() {

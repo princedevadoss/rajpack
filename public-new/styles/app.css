@@ -11,7 +11,7 @@ body {
     position: fixed;
     width: 100%;
     height: 60px;
-    min-width: 600px;
+    min-width: 700px;
     z-index: 4;
     background: rgb(66, 152, 250);
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.301);
@@ -356,6 +356,7 @@ body {
 .float-container {
     position: fixed;
     display: flex;
+    overflow: scroll;
     width: 100vw;
     height: 100vh;
     background: rgba(0, 0, 0, 0.6);
@@ -764,7 +765,39 @@ body {
     width: 400px;
     position: relative;
     cursor: pointer;
+    opacity: 0;
     height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 5px;
+    -webkit-transition: opacity 1s, transform 1s;
+    -moz-transition: opacity 1s, transform 1s;
+    -ms-transition: opacity 1s, transform 1s;
+    transition: opacity 1s, transform 1s;
+}
+
+.rot-type1{
+    transform: rotate(10deg) !important;
+    opacity: 1 !important;
+}
+
+.rot-type2{
+    transform: rotate(-10deg) !important;
+    opacity: 1 !important;
+}
+
+.rot-type3{
+    transform: rotate(5deg) !important;
+    opacity: 1 !important;
+}
+
+.rot-type4{
+    transform: rotate(-5deg) !important;
+    opacity: 1 !important;
+}
+
+.rot-type5{
+    transform: rotate3d(1, 1, 1, 10deg) !important;
+    opacity: 1 !important;
 }
 
 .machinery-text {
@@ -778,12 +811,13 @@ body {
     color: white;
     font-weight: 600;
     cursor: pointer;
+    transform: rotate(0);
     z-index: -5;
     background: rgba(0, 0, 0, 0.589);
-    -webkit-transition: width 1s, height 1s;
-    -moz-transition: width 1s, height 1s;
-    -ms-transition: width 1s, height 1s;
-    transition: width 1s, height 1s;
+    -webkit-transition: width 1s, height 1s, transform 1s;
+    -moz-transition: width 1s, height 1s, transform 1s;
+    -ms-transition: width 1s, height 1s, transform 1s;
+    transition: width 1s, height 1s, transform 1s;
 }
 
 .machinery-text.type1 {
