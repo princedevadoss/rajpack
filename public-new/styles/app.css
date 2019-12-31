@@ -902,6 +902,10 @@ img:hover + .machinery-text, img + .machinery-text:hover {
     z-index: 0;
 }
 
+img:hover, .machinery-text:hover + img {
+    transform: rotate(0deg) !important;
+}
+
 @media screen and (max-width: 1200px) {
     .fa-twitter {
         top: 80px;
