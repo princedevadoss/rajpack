@@ -34,7 +34,7 @@ body {
 .logo-container {
     float: left;
     height: 62px;
-    width: 60px;
+    width: 80px;
     position: relative;
     background: white;
 }
@@ -42,8 +42,8 @@ body {
     position: absolute;
     left: -6px;
     top: -3px;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 90px;
 }
 
 .nav-tab > a {
@@ -693,7 +693,7 @@ body {
     padding: 5px 10px;
     border-radius: 10px;
     background: white;
-    z-index: 5;
+    z-index: 1;
     cursor: pointer;
     -webkit-transition: width 1s;
     -moz-transition: width 1s;
