@@ -57,11 +57,18 @@ $(document).ready(function() {
             $('.short-card').addClass('img-type-left');
         }
 
-        if (scroll >= ($('.card.type1').offset().top - 800)) {
-            $('.card.type1').removeClass('img-type-left');
+        if (scroll >= ($('#about .card.type1').offset().top - 800)) {
+            $('#about .card.type1').removeClass('img-type-left');
         }
         else {
-            $('.card.type1').addClass('img-type-left');
+            $('#about .card.type1').addClass('img-type-left');
+        }
+
+        if (scroll >= ($('#workplace .card.type1').offset().top - 600)) {
+            $('#workplace .card.type1').removeClass('img-type-left');
+        }
+        else {
+            $('#workplace .card.type1').addClass('img-type-left');
         }
 
         if (scroll >= ($('.card.type2').first().offset().top - 1000)) {
