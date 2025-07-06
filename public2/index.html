@@ -4,142 +4,240 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sasipacks</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Inter Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'sans-serif']
-          }
-        }
-      }
-    }
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: '#8b5cf6', // violet-500
+            lightbg: '#fdf4ff',
+            cardbg: '#ffffff',
+            text: '#1e1e1e',
+          },
+        },
+      },
+    };
   </script>
-  
+
+  <!-- Gradient Background Style -->
   <style>
     body {
-      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #f3e8ff, #ffffff 60%);
     }
   </style>
-  <style>
-    @keyframes slideVertical {
-      0%    { transform: translateY(0%); }
-      20%   { transform: translateY(0%); }
-      25%   { transform: translateY(-100%); }
-      45%   { transform: translateY(-100%); }
-      50%   { transform: translateY(-200%); }
-      70%   { transform: translateY(-200%); }
-      75%   { transform: translateY(-300%); }
-      95%   { transform: translateY(-300%); }
-      100%  { transform: translateY(-400%); }
-    }
-    
-    .carousel-vertical {
-      display: flex;
-      flex-direction: column;
-      height: 500%;
-    }
-    .carousel-vertical img {
-      height: 100%;
-      width: 100%;
-      object-fit: cover;
-    }
-    .animate-slide-vertical {
-      animation: slideVertical 25s infinite ease-in-out;
-    }
-    </style>
-    
 </head>
-<body class="font-sans bg-orange-50 text-gray-800">
+<body class="font-sans text-text">
 
   <!-- Header -->
-  <header class="bg-white shadow sticky top-0 z-50">
+  <header class="fixed w-full top-0 z-50">
     <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <div class="flex items-center">
-        <img src="assets/logo.svg" alt="Sasipacks Logo" class="h-14 w-auto" />
-      </div>
-      <nav class="hidden md:flex space-x-6 font-medium text-sm">
-        <a href="#products" class="text-gray-700 hover:text-orange-600">Products</a>
-        <a href="#about" class="text-gray-700 hover:text-orange-600">About Us</a>
-        <a href="#contact" class="text-gray-700 hover:text-orange-600">Contact</a>
+      <img src="assets/logo.svg" alt="Sasipacks Logo" class="h-14" />
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-text">
+        <a href="#products" class="hover:text-primary transition font-bold">Products</a>
+        <a href="#about" class="hover:text-primary transition font-bold">About</a>
+        <a href="#contact" class="hover:text-primary transition font-bold">Contact</a>
       </nav>
     </div>
   </header>
 
-  <!-- Banner -->
-  <!-- Banner with Rolling Carousel -->
-  <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-orange-600">
-    <div class="absolute inset-0">
-      <!-- Carousel Container -->
-      <div class="carousel-vertical h-full w-full animate-slide-vertical">
-        <!-- Images (Add real URLs later) -->
-        <img src="assets/image1.JPG" class="w-full h-full object-cover" />
-        <img src="assets/image3.JPG" class="w-full h-full object-cover" />
-        <img src="assets/image4.JPG" class="w-full h-full object-cover" />
-        <img src="assets/image5.JPG" class="w-full h-full object-cover" />
-      </div>
+  <!-- Banner Section (Preserved) -->
+  <!-- Banner Section -->
+  <section class="w-full h-[80vh] bg-gradient-to-br from-white via-purple-50 to-purple-100 pt-20 flex flex-col md:flex-row items-center justify-center px-6 md:px-20 gap-8 overflow-hidden">
+
+    <!-- 🎯 Overlay Text (Left Side) -->
+    <div class="z-10 w-full md:w-1/5 text-center md:text-left">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Sasipacks</h1>
+        <p class="text-lg md:text-xl text-gray-700 mb-6">
+          Elegant Corrugated Packaging Solutions Built for Modern Industry
+        </p>
+        <a href="#products" class="inline-block px-6 py-3 bg-violet-600 text-white font-semibold rounded-lg shadow hover:bg-violet-700 transition">
+          View Our Products
+        </a>
     </div>
   
-    <!-- Overlay Text Content -->
-    <div class="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-20 text-white">
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Sasipacks</h1>
-      <p class="text-lg md:text-xl max-w-xl drop-shadow-md">
-        Premium Corrugated & Industrial Packaging Solutions Built to Perform
-      </p>
-      <a href="#products" class="mt-6 px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg shadow hover:bg-orange-100 transition">
-        Explore Products
-      </a>
+    <!-- 🎞️ Carousel (Right Side) -->
+    <div class="relative w-full md:w-4/5 h-[70vh] flex justify-center items-center">
+      <div id="carousel-stack" class="relative w-full h-full">
+        <img id="img1" class="carousel-img" />
+        <img id="img2" class="carousel-img" />
+        <img id="img3" class="carousel-img" />
+        <img id="img4" class="carousel-img" />
+      </div>
     </div>
   </section>
+  
+  
+  
+  
 
   <!-- Products Section -->
-  <section id="products" class="py-16 bg-white">
+  <section id="products" class="py-20">
     <div class="max-w-7xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-orange-600 mb-6">Our Products</h2>
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        <div class="bg-orange-50 rounded-lg shadow p-4">
-          <img src="https://via.placeholder.com/300x200" alt="Product 1" class="rounded mb-4">
-          <h3 class="font-bold text-lg text-gray-800">Corrugated Boxes</h3>
-          <p class="text-gray-600 text-sm">Heavy-duty and customizable for safe transport.</p>
+      <h2 class="text-3xl font-bold text-primary mb-6">Our Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/300x200" alt="Product 1" class="rounded mb-4 w-full" />
+          <h3 class="text-xl font-semibold mb-2 text-text">Corrugated Box A</h3>
+          <p class="text-gray-600 text-sm">Color: Brown · Material: Kraft · Shape: Rectangle</p>
         </div>
-        <div class="bg-orange-50 rounded-lg shadow p-4">
-          <img src="https://via.placeholder.com/300x200" alt="Product 2" class="rounded mb-4">
-          <h3 class="font-bold text-lg text-gray-800">Printed Cartons</h3>
-          <p class="text-gray-600 text-sm">Branded packaging with high visual appeal.</p>
+        <!-- Product 2 -->
+        <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/300x200" alt="Product 2" class="rounded mb-4 w-full" />
+          <h3 class="text-xl font-semibold mb-2 text-text">Printed Carton B</h3>
+          <p class="text-gray-600 text-sm">Color: White · Material: Duplex · Shape: Square</p>
         </div>
-        <div class="bg-orange-50 rounded-lg shadow p-4">
-          <img src="https://via.placeholder.com/300x200" alt="Product 3" class="rounded mb-4">
-          <h3 class="font-bold text-lg text-gray-800">Rolls & Wraps</h3>
-          <p class="text-gray-600 text-sm">Flexible and eco-conscious protective packaging.</p>
+        <!-- Product 3 -->
+        <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+          <img src="https://via.placeholder.com/300x200" alt="Product 3" class="rounded mb-4 w-full" />
+          <h3 class="text-xl font-semibold mb-2 text-text">Shipping Roll C</h3>
+          <p class="text-gray-600 text-sm">Color: Kraft · Material: Paper Roll · Shape: Cylindrical</p>
         </div>
+      </div>
+
+      <!-- View More Products Button -->
+      <div class="mt-10">
+        <a href="products.html" class="inline-block px-6 py-3 border border-primary text-primary rounded hover:bg-primary hover:text-white transition">
+          View More Products
+        </a>
       </div>
     </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16 bg-orange-100">
+  <section id="about" class="py-20">
     <div class="max-w-4xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-orange-700 mb-4">About Sasipacks</h2>
-      <p class="text-gray-700 text-lg">
-        Sasipacks is a leading manufacturer of corrugated packaging solutions in South India. With a commitment to quality and innovation, we help businesses package better, safer, and smarter.
+      <h2 class="text-3xl font-bold text-primary mb-6">About Sasipacks</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Sasipacks is a trusted name in South India's packaging industry. With decades of experience, we manufacture high-performance corrugated and custom packaging solutions that combine strength, style, and sustainability.
       </p>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 bg-white">
+  <section id="contact" class="py-20">
     <div class="max-w-3xl mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold text-orange-600 mb-4">Contact Us</h2>
-      <p class="text-gray-600 mb-6">For inquiries or quotes, feel free to get in touch with us.</p>
-      <a href="mailto:contact@sasipacks.com" class="text-orange-700 font-semibold underline">contact@sasipacks.com</a>
+      <h2 class="text-3xl font-bold text-primary mb-4">Contact Us</h2>
+      <p class="text-gray-600 mb-6">Reach out for custom quotes, product info, or collaboration.</p>
+      <a href="mailto:contact@sasipacks.com" class="inline-block text-primary border border-primary px-6 py-3 rounded hover:bg-primary hover:text-white transition">
+        contact@sasipacks.com
+      </a>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="bg-orange-700 text-white text-center py-6">
+  <footer class="bg-white text-gray-500 text-center py-6 text-sm border-t border-gray-200">
     &copy; 2025 Sasipacks. All rights reserved.
   </footer>
+
+  <!-- Carousel Animation (unchanged) -->
+  <style>
+
+    .carousel-img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 60%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: transform 1s ease, opacity 1s ease, z-index 1s ease;
+  }
+
+  .left {
+    transform: translateX(-30%) scale(0.85);
+    z-index: 1;
+    opacity: 0.7;
+  }
+
+  .center {
+    transform: translateX(-50%) scale(1);
+    z-index: 3;
+    opacity: 1;
+  }
+
+  .right {
+    transform: translateX(-70%) scale(0.85);
+    z-index: 2;
+    opacity: 0.7;
+  }
+
+  .hidden-img {
+    transform: translateX(100%) scale(0.8);
+    opacity: 0;
+    z-index: 0;
+  }
+  </style>
+  
+  <script>
+    const imageUrls = [
+    "assets/image1.JPG" ,
+        "assets/image3.JPG" ,
+        "assets/image4.JPG" ,
+        "assets/machineries/corrugation.jpg" ,
+        "assets/machineries/stitching.jpg" ,
+        "assets/card3.JPG" ,
+        "assets/card4.JPG" ,
+        "assets/card8.JPG" 
+    ];
+  
+    
+    let currentIndex = 0;
+  const imgs = [
+    document.getElementById('img1'),
+    document.getElementById('img2'),
+    document.getElementById('img3'),
+    document.getElementById('img4')
+  ];
+
+  // Initialize with first 4 images
+  imgs[0].src = imageUrls[0];
+  imgs[1].src = imageUrls[1];
+  imgs[2].src = imageUrls[2];
+  imgs[3].src = imageUrls[3];
+
+  imgs[0].className = 'carousel-img left';
+  imgs[1].className = 'carousel-img center';
+  imgs[2].className = 'carousel-img right';
+  imgs[3].className = 'carousel-img hidden-img';
+
+  function rotateImages() {
+    // Slide: L → out, C → L, R → C, hidden → R
+    const nextIndex = (currentIndex + 3) % imageUrls.length;
+    const outgoing = imgs.shift();  // remove first
+    imgs.push(outgoing);            // add to end
+
+    // Update image source for new right image
+    outgoing.src = imageUrls[nextIndex];
+
+    // Reassign roles
+    imgs[0].className = 'carousel-img left';
+    imgs[1].className = 'carousel-img center';
+    imgs[2].className = 'carousel-img right';
+    imgs[3].className = 'carousel-img hidden-img';
+
+    currentIndex = (currentIndex + 1) % imageUrls.length;
+  }
+
+  setInterval(rotateImages, 5000);
+  </script>
+  
 </body>
 </html>
+
+
+
+
+
+
+        

@@ -1,0 +1,124 @@
+<!-- products.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Products – Sasipacks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          },
+          colors: {
+            primary: '#f97316',
+            darkbg: '#0f0f0f',
+            card: '#1c1c1c',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-sans bg-darkbg text-white">
+
+  <!-- Header -->
+  <header class="w-full top-0 z-50 bg-darkbg/90 shadow border-b border-gray-800 sticky">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <h1 class="text-xl font-semibold text-white">Sasipacks</h1>
+      <a href="index.html" class="text-sm text-gray-400 hover:text-primary">← Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Products List -->
+  <section class="py-16 px-6 max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold text-primary mb-10 text-center">All Products</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- Product Card Loop -->
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+1" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Corrugated Box A</h3>
+        <p class="text-sm text-gray-400">Color: Brown · Material: Kraft · Shape: Rectangle</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+2" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Printed Carton B</h3>
+        <p class="text-sm text-gray-400">Color: White · Material: Duplex · Shape: Square</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+3" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Shipping Roll C</h3>
+        <p class="text-sm text-gray-400">Color: Kraft · Material: Paper Roll · Shape: Cylindrical</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+4" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Heavy-Duty Carton D</h3>
+        <p class="text-sm text-gray-400">Color: Brown · Material: 5 Ply · Shape: Rectangle</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+5" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Die-Cut Box E</h3>
+        <p class="text-sm text-gray-400">Color: White · Material: Duplex · Shape: Custom</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+6" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Corrugated Roll F</h3>
+        <p class="text-sm text-gray-400">Color: Brown · Material: Kraft Roll · Shape: Cylindrical</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+7" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Mailer Box G</h3>
+        <p class="text-sm text-gray-400">Color: Black · Material: Duplex · Shape: Flat</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+8" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Printed Display Box H</h3>
+        <p class="text-sm text-gray-400">Color: Full-Print · Material: Art Board · Shape: Foldable</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+9" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Corrugated Sheet I</h3>
+        <p class="text-sm text-gray-400">Color: Brown · Material: Kraft Sheet · Shape: Flat</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+10" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Pizza Box J</h3>
+        <p class="text-sm text-gray-400">Color: Brown/White · Material: Duplex · Shape: Square</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+11" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Fruit Tray K</h3>
+        <p class="text-sm text-gray-400">Color: White · Material: Duplex · Shape: Tray</p>
+      </div>
+
+      <div class="bg-card p-6 rounded-xl shadow hover:shadow-lg transition">
+        <img src="https://via.placeholder.com/300x200?text=Product+12" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2">Die Cut Insert L</h3>
+        <p class="text-sm text-gray-400">Color: Brown · Material: Kraft · Shape: Custom Cut</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-500 text-center py-6 text-sm border-t border-gray-800">
+    &copy; 2025 Sasipacks. All rights reserved.
+  </footer>
+
+</body>
+</html>
