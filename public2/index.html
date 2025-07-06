@@ -27,37 +27,46 @@
       },
     };
   </script>
-
-  <!-- Gradient Background Style -->
-  <style>
-    body {
-      background: radial-gradient(circle at top left, #f3e8ff, #ffffff 60%);
-    }
-  </style>
 </head>
 <body class="font-sans text-text">
 
   <!-- Header -->
-  <header class="fixed w-full top-0 z-50">
-    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-      <img src="assets/logo.svg" alt="Sasipacks Logo" class="h-14" />
+  <header class="fixed w-full top-0 z-50 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <img src="assets/logo.svg" alt="Sasipacks Logo" class="h-16" />
       <nav class="hidden md:flex space-x-6 text-sm font-medium text-text">
-        <a href="#products" class="hover:text-primary transition font-bold">Products</a>
-        <a href="#about" class="hover:text-primary transition font-bold">About</a>
-        <a href="#contact" class="hover:text-primary transition font-bold">Contact</a>
+        <a href="/products.html" class="hover:text-white transition font-bold rounded-2xl px-4 py-2 hover:bg-primary">Products</a>
+        <a href="#about" class="hover:text-white transition font-bold rounded-2xl px-4 py-2 hover:bg-primary">About</a>
+        <a href="#contact" class="hover:text-white transition font-bold rounded-2xl px-4 py-2 hover:bg-primary">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- Banner Section (Preserved) -->
   <!-- Banner Section -->
-  <section class="w-full h-[80vh] bg-gradient-to-br from-white via-purple-50 to-purple-100 pt-20 flex flex-col md:flex-row items-center justify-center px-6 md:px-20 gap-8 overflow-hidden">
+  <section class="w-full h-[90vh] bg-gradient-to-b relative from-white via-purple-50 to-purple-100 pt-20 flex flex-col md:flex-row items-center justify-center px-6 md:px-20 gap-8 overflow-hidden">
+
+    <!-- ✨ Animated Box Background -->
+    <div class="absolute inset-0 overflow-hidden z-0 pointer-events-none">
+      <img src="assets/carton1.webp" 
+           class="absolute w-32 opacity-40 animate-float-box"
+           style="top: 10%; left: 5%; animation-delay: 0s;" />
+    
+      <img src="assets/carton2.webp" 
+           class="absolute w-32 opacity-40 animate-float-box"
+           style="top: 35%; left: 30%; animation-delay: 3s;" />
+    
+      <img src="assets/carton3.jpg" 
+           class="absolute w-32 opacity-40 animate-float-box"
+           style="top: 80%; left: 15%; animation-delay: 6s;" />
+    </div>
+
 
     <!-- 🎯 Overlay Text (Left Side) -->
-    <div class="z-10 w-full md:w-1/5 text-center md:text-left">
+    <div class="relative z-10 w-full md:w-1/3 text-center md:text-left">
         <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-800">Sasipacks</h1>
         <p class="text-lg md:text-xl text-gray-700 mb-6">
-          Elegant Corrugated Packaging Solutions Built for Modern Industry
+          Corrugated Packaging Solutions Built for Modern Industry
         </p>
         <a href="#products" class="inline-block px-6 py-3 bg-violet-600 text-white font-semibold rounded-lg shadow hover:bg-violet-700 transition">
           View Our Products
@@ -65,8 +74,8 @@
     </div>
   
     <!-- 🎞️ Carousel (Right Side) -->
-    <div class="relative w-full md:w-4/5 h-[70vh] flex justify-center items-center">
-      <div id="carousel-stack" class="relative w-full h-full">
+    <div class="relative z-10 w-full md:w-2/3 h-[70vh] flex justify-center items-center">
+      <div id="carousel-stack" class="relative w-full h-[80%]">
         <img id="img1" class="carousel-img" />
         <img id="img2" class="carousel-img" />
         <img id="img3" class="carousel-img" />
@@ -86,19 +95,19 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
         <!-- Product 1 -->
         <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
-          <img src="https://via.placeholder.com/300x200" alt="Product 1" class="rounded mb-4 w-full" />
+          <img src="assets/products/Adtrol-HD.png" alt="Product 1" class="rounded mb-4 w-full" />
           <h3 class="text-xl font-semibold mb-2 text-text">Corrugated Box A</h3>
           <p class="text-gray-600 text-sm">Color: Brown · Material: Kraft · Shape: Rectangle</p>
         </div>
         <!-- Product 2 -->
         <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
-          <img src="https://via.placeholder.com/300x200" alt="Product 2" class="rounded mb-4 w-full" />
+          <img src="assets/products/giftbox.png" alt="Product 2" class="rounded mb-4 w-full" />
           <h3 class="text-xl font-semibold mb-2 text-text">Printed Carton B</h3>
           <p class="text-gray-600 text-sm">Color: White · Material: Duplex · Shape: Square</p>
         </div>
         <!-- Product 3 -->
         <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
-          <img src="https://via.placeholder.com/300x200" alt="Product 3" class="rounded mb-4 w-full" />
+          <img src="assets/products/Pizzabox.png" alt="Product 3" class="rounded mb-4 w-full" />
           <h3 class="text-xl font-semibold mb-2 text-text">Shipping Roll C</h3>
           <p class="text-gray-600 text-sm">Color: Kraft · Material: Paper Roll · Shape: Cylindrical</p>
         </div>
@@ -118,7 +127,19 @@
     <div class="max-w-4xl mx-auto px-6 text-center">
       <h2 class="text-3xl font-bold text-primary mb-6">About Sasipacks</h2>
       <p class="text-gray-700 text-lg leading-relaxed">
-        Sasipacks is a trusted name in South India's packaging industry. With decades of experience, we manufacture high-performance corrugated and custom packaging solutions that combine strength, style, and sustainability.
+        Sasipacks is a India, Chennai based company engaged in design, printing, manufacturing & distributing wide range of packaging materials such as corrugated boxes, cardboard boxes etc.. We provide package design solutions to a wide array of industry and end user applications.
+      </p>
+      <br>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Our packaging and shipping supplies are manufactured with high-quality materials that can protect your contents in a safe way. Our corrugation and packaging includes wide variety of sizes, color, GSM and printed materials. We also support wide varieties like 1 Ply, 3 Ply, 5 Ply, 7Ply and 9 Ply Boxes. We provides high quality corrugated boxes with affordable prize compared to market rate.
+      </p>
+      <br>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        Our Journey So Far We started at the year 2001 with rented space with around 5 skilled and unskilled staffs. We had a annual turnover of around 10 lakhs per annum. Now we are in our own space of around 10000.sq.ft with two floors and having around 15+ skilled and unskilled labours. We are currently making a turnover of around 50 lakhs per annum.
+      </p>
+      <br>
+      <p class="text-gray-700 text-lg leading-relaxed">
+        <b>Mr. V.K.Devadoss</b> is the Director of the Company since inception. He is a Fellow Member of the <b>SICBMA (SOUTH INDIA CORRUGATED BOX MANUFACTURERS ASSOCIATION)</b>. The Company has witnessed landmark transformation under his leadership. His dynamic personality is the reason the Company has reached new heights and endeavours.
       </p>
     </div>
   </section>
@@ -142,6 +163,25 @@
   <!-- Carousel Animation (unchanged) -->
   <style>
 
+@keyframes floatBox {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.4;
+    }
+    50% {
+      transform: translateY(-30px) rotate(10deg);
+      opacity: 0.2;
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 0.4;
+    }
+  }
+
+  .animate-float-box {
+    animation: floatBox 10s ease-in-out infinite;
+  }
+
     .carousel-img {
     position: absolute;
     top: 0;
@@ -149,15 +189,13 @@
     width: 60%;
     height: 100%;
     object-fit: cover;
-    border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
     transition: transform 1s ease, opacity 1s ease, z-index 1s ease;
   }
 
   .left {
     transform: translateX(-30%) scale(0.85);
     z-index: 1;
-    opacity: 0.7;
+    opacity: 0.05;
   }
 
   .center {
@@ -169,7 +207,7 @@
   .right {
     transform: translateX(-70%) scale(0.85);
     z-index: 2;
-    opacity: 0.7;
+    opacity: 0.05;
   }
 
   .hidden-img {
@@ -181,14 +219,14 @@
   
   <script>
     const imageUrls = [
-    "assets/image1.JPG" ,
-        "assets/image3.JPG" ,
-        "assets/image4.JPG" ,
-        "assets/machineries/corrugation.jpg" ,
-        "assets/machineries/stitching.jpg" ,
-        "assets/card3.JPG" ,
-        "assets/card4.JPG" ,
-        "assets/card8.JPG" 
+    "assets/products/Adtrol-HD.png" ,
+        "assets/products/agrila_open.png" ,
+        "assets/products/apache_tire_pressure.png" ,
+        "assets/products/ucal.png" ,
+        "assets/products/premium_coatings.png" ,
+        "assets/products/giftbox.png" ,
+        "assets/products/laser_toner.png" ,
+        "assets/products/tribocare.png" 
     ];
   
     
