@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sasipacks</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+  <style>
+    @keyframes slideVertical {
+      0%    { transform: translateY(0%); }
+      20%   { transform: translateY(0%); }
+      25%   { transform: translateY(-100%); }
+      45%   { transform: translateY(-100%); }
+      50%   { transform: translateY(-200%); }
+      70%   { transform: translateY(-200%); }
+      75%   { transform: translateY(-300%); }
+      95%   { transform: translateY(-300%); }
+      100%  { transform: translateY(-400%); }
+    }
+    
+    .carousel-vertical {
+      display: flex;
+      flex-direction: column;
+      height: 500%;
+    }
+    .carousel-vertical img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+    .animate-slide-vertical {
+      animation: slideVertical 25s infinite ease-in-out;
+    }
+    </style>
+    
+</head>
+<body class="font-sans bg-orange-50 text-gray-800">
+
+  <!-- Header -->
+  <header class="bg-white shadow sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="assets/logo.svg" alt="Sasipacks Logo" class="h-14 w-auto" />
+      </div>
+      <nav class="hidden md:flex space-x-6 font-medium text-sm">
+        <a href="#products" class="text-gray-700 hover:text-orange-600">Products</a>
+        <a href="#about" class="text-gray-700 hover:text-orange-600">About Us</a>
+        <a href="#contact" class="text-gray-700 hover:text-orange-600">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Banner -->
+  <!-- Banner with Rolling Carousel -->
+  <section class="relative w-full h-[500px] md:h-[600px] overflow-hidden bg-orange-600">
+    <div class="absolute inset-0">
+      <!-- Carousel Container -->
+      <div class="carousel-vertical h-full w-full animate-slide-vertical">
+        <!-- Images (Add real URLs later) -->
+        <img src="assets/image1.JPG" class="w-full h-full object-cover" />
+        <img src="assets/image2.JPG" class="w-full h-full object-cover" />
+        <img src="assets/image3.JPG" class="w-full h-full object-cover" />
+        <img src="assets/image4.JPG" class="w-full h-full object-cover" />
+        <img src="assets/image5.JPG" class="w-full h-full object-cover" />
+      </div>
+    </div>
+  
+    <!-- Overlay Text Content -->
+    <div class="relative z-10 h-full flex flex-col justify-center items-start px-6 md:px-20 text-white">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">Sasipacks</h1>
+      <p class="text-lg md:text-xl max-w-xl drop-shadow-md">
+        Premium Corrugated & Industrial Packaging Solutions Built to Perform
+      </p>
+      <a href="#products" class="mt-6 px-6 py-3 bg-white text-orange-600 font-semibold rounded-lg shadow hover:bg-orange-100 transition">
+        Explore Products
+      </a>
+    </div>
+  </section>
+
+  <!-- Products Section -->
+  <section id="products" class="py-16 bg-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-orange-600 mb-6">Our Products</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <div class="bg-orange-50 rounded-lg shadow p-4">
+          <img src="https://via.placeholder.com/300x200" alt="Product 1" class="rounded mb-4">
+          <h3 class="font-bold text-lg text-gray-800">Corrugated Boxes</h3>
+          <p class="text-gray-600 text-sm">Heavy-duty and customizable for safe transport.</p>
+        </div>
+        <div class="bg-orange-50 rounded-lg shadow p-4">
+          <img src="https://via.placeholder.com/300x200" alt="Product 2" class="rounded mb-4">
+          <h3 class="font-bold text-lg text-gray-800">Printed Cartons</h3>
+          <p class="text-gray-600 text-sm">Branded packaging with high visual appeal.</p>
+        </div>
+        <div class="bg-orange-50 rounded-lg shadow p-4">
+          <img src="https://via.placeholder.com/300x200" alt="Product 3" class="rounded mb-4">
+          <h3 class="font-bold text-lg text-gray-800">Rolls & Wraps</h3>
+          <p class="text-gray-600 text-sm">Flexible and eco-conscious protective packaging.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-16 bg-orange-100">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-orange-700 mb-4">About Sasipacks</h2>
+      <p class="text-gray-700 text-lg">
+        Sasipacks is a leading manufacturer of corrugated packaging solutions in South India. With a commitment to quality and innovation, we help businesses package better, safer, and smarter.
+      </p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-16 bg-white">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-3xl font-bold text-orange-600 mb-4">Contact Us</h2>
+      <p class="text-gray-600 mb-6">For inquiries or quotes, feel free to get in touch with us.</p>
+      <a href="mailto:contact@sasipacks.com" class="text-orange-700 font-semibold underline">contact@sasipacks.com</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-orange-700 text-white text-center py-6">
+    &copy; 2025 Sasipacks. All rights reserved.
+  </footer>
+</body>
+</html>

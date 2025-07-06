@@ -11,16 +11,11 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.use('/', express.static(path.join(__dirname, '../public-new')));
-app.use('/old', express.static(path.join(__dirname, '../public')));
 app.use('/app', main);
 app.get('/*', function(req, res) {
     res.sendfile('../public-new/index.html')
 });
-app.get('/old/*', function(req, res) {
-  res.sendfile('../public/index.html')
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server running on port ${port}`);
 });
-app.get('/boxapp', function(req, res) {
-  res.sendfile('./public/boxapp/index.html')
-});
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
 

@@ -2,7 +2,7 @@ $(document).ready(function() {
     $('.image-carousel > img').addClass('invisible');
     $('.image-carousel > img').first().attr('data-active', true).removeClass('invisible');
     $('#img-prev').click(function() {
-        changeImage($('img[data-active="true"').data('id'), true, 5, 1);  
+        changeImage($('img[data-active="true"').data('id'), true, 4, 1);  
     });
 
     function loadTemplate(url, imageUrl, imageHeader) {
@@ -163,11 +163,11 @@ $(document).ready(function() {
     });
 
     $('#img-next').click(function() {
-        changeImage($('img[data-active="true"').data('id'), false, 5, 1);  
+        changeImage($('img[data-active="true"').data('id'), false, 4, 1);  
     });
 
     function changer() {
-        changeImage($('img[data-active="true"').data('id'), false, 5, 1);
+        changeImage($('img[data-active="true"').data('id'), false, 4, 1);
     }
 
     var period = setInterval(changer, 4000);

@@ -1,16 +1,15 @@
 branch-defaults:
   master:
-    environment: Rajpck-env
+    environment: Sasipacks-env
 environment-defaults:
-  Rajpck-env:
-    branch: master
-    repository: origin
+  Sasipacks-env:
+    branch: null
+    repository: null
 global:
-  application_name: rajpck
+  application_name: sasipacks
   default_ec2_keyname: null
-  default_platform: arn:aws:elasticbeanstalk:us-east-2::platform/Node.js running on
-    64bit Amazon Linux/4.12.0
-  default_region: us-east-2
+  default_platform: Node.js 20 running on 64bit Amazon Linux 2023
+  default_region: eu-north-1
   include_git_submodules: true
   instance_profile: null
   platform_name: null
