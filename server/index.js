@@ -10,10 +10,10 @@ app.use(bodyParser({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use('/', express.static(path.join(__dirname, '../public2')));
+app.use('/', express.static(path.join(__dirname, '../public')));
 app.use('/app', main);
 app.get('/*', function(req, res) {
-    res.sendfile('../public2/index.html')
+    res.sendfile('../public/index.html')
 });
 app.listen(port, '0.0.0.0', () => {
   console.log(`Server running on port ${port}`);

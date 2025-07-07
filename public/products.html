@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>All Products - Sasipacks</title>
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            primary: '#8b5cf6',
+            cardbg: '#ffffff',
+            text: '#1e1e1e',
+          },
+        },
+      },
+    };
+  </script>
+</head>
+<body class="bg-gray-50 font-sans text-text bg-gradient-to-b from-purple-50 to-purple-100 ">
+
+  <!-- Header -->
+  <header class="fixed w-full top-0 z-50 bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between">
+      <img src="assets/logo.svg" alt="Sasipacks Logo" class="h-14" />
+      <nav class="hidden md:flex space-x-6 text-sm font-medium text-text">
+        <a href="/" class="hover:text-primary transition font-bold">Home</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Product Grid -->
+  <main class="max-w-7xl mx-auto px-6 py-24">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+
+      <!-- Product Cards -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/Adtrol-HD.png" alt="Multicolored Medical Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">Multicolored Medical Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Multicolor <br> <b>Material</b> - Duplex <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/giftbox.png" alt="3 Ply Mono Carton Gift Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Mono Carton Gift Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - White <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/Pizzabox.png" alt="Product 3" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Duplex Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - White <br> <b>Material</b> - Paper <br> <b>Shape</b> - Square</p>
+      </div>
+
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/Agrila_close.png" alt="5 Ply Single Color Printed Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">5 Ply Single Color Printed Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Brown <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/apache_tire_pressure.png" alt="3 Ply Multicolored Toolkit Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Multicolored Toolkit Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Multicolor <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/clock.png" alt="3 Ply Multicolored Gift Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Multicolored Gift Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Multicolor <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/laser_toner.png" alt="3 Ply Multi Colored Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Multi Colored Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Multicolor <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/premium_coatings.png" alt="3 Ply Multicolored Printed Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Multicolored Printed Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Multicolor <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/tribocare.png" alt="3 Ply Multi Colored Printed Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Multi Colored Printed Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Multicolor <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/7plybox.jpg" alt="7 Ply Corrugated Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">7 Ply Corrugated Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Brown <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/pallet-box.jpg" alt="Pallet Corrugated Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">Pallet Corrugated Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Multicolor <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/icecream.jpg" alt="3 Ply Icecream Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">3 Ply Icecream Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Brown <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/export_box.jpg" alt="5 Ply Export Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">5 Ply Export Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Brown <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 2 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/house_shifting.jpg" alt="House Shifting Moving Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">House Shifting Moving Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Brown <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+      <!-- Product 3 -->
+      <div class="bg-cardbg rounded-xl p-6 shadow-md hover:shadow-xl transition">
+        <img src="assets/products/top-bottom.jpg" alt="Top And Bottom Type Carton Box" class="rounded mb-4 w-full" />
+        <h3 class="text-xl font-semibold mb-2 text-center">Top And Bottom Type Carton Box</h3>
+        <p class="text-gray-600 text-sm text-center"><b>Color</b> - Brown <br> <b>Material</b> - Cardboard <br> <b>Shape</b> - Rectangular</p>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-center text-gray-500 text-sm py-6 border-t border-gray-200">
+    &copy; 2025 Sasipacks. All rights reserved.
+  </footer>
+</body>
+</html>
