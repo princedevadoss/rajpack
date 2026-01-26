@@ -8,7 +8,7 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
-    "mongoose": "^5.4.10"
+    "mongoose": "^6.13.6"
   },
   "scripts": {
     "start": "node --inspect app.js"
